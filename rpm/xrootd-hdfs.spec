@@ -1,5 +1,5 @@
 Name: xrootd-hdfs
-Version: 2.1.2
+Version: 2.1.3
 Release: 1%{?dist}
 Summary: HDFS plugin for xrootd
 
@@ -67,9 +67,9 @@ rm $RPM_BUILD_ROOT%{_bindir}/xrootd_hdfs_envcheck
 %{_includedir}/XrdHdfs.hh
 
 %changelog
-* Tue Sep 10 2018 Marian Zvada <marian.zvadat@cern.ch> - 2.1.2-1
-- Fix segfault when converting checksum bytes to a human-readable format 
-- SOFTWARE-3410
+* Tue Sep 11 2018 Brian Bockelman <bbockelm@cse.unl.edu> - 2.1.3-1
+- Implement missing LFN2PFN methods, fixing checksum calculations when name
+  translation is used.
 
 * Wed Jul 25 2018 Brian Bockelman <bbockelm@cse.unl.edu> - 2.1.1-1
 - Add missing build deps.
